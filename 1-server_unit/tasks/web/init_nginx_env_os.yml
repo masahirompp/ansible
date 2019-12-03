@@ -40,10 +40,10 @@
   file: state=directory path=/opt/disk1/var/log owner=root group=root mode=0755
 
 - name: Create /personium/nginx/lib symlink
-  file: state=link src=/personium/nginx/lib dest=/opt/disk1/var/lib/nginx owner=root group=root mode=0777
+  file: state=link src=/personium/nginx/lib dest=/opt/disk1/var/lib/nginx owner=root group=root mode=0777 force=yes
 
 - name: Create /personium/nginx/log symlink
-  file: state=link src=/personium/nginx/log dest=/opt/disk1/var/log/nginx owner=root group=root mode=0777
+  file: state=link src=/personium/nginx/log dest=/opt/disk1/var/log/nginx owner=root group=root mode=0777 force=yes
 
 - name: Create /opt/var directory
   file: state=directory path=/opt/var owner=root group=root mode=0755
@@ -55,7 +55,7 @@
   file: state=directory path=/opt/var/log owner=root group=root mode=0755
 
 - name: Create /personium/nginx/lib symlink
-  file: state=link src=/personium/nginx/lib dest=/opt/var/lib/nginx owner=root group=root mode=0777
+  file: state=link src=/personium/nginx/lib dest=/opt/var/lib/nginx owner=root group=root mode=0777 force=yes
 
 - name: Create /personium/nginx/log symlink
-  file: state=link src=/personium/nginx/log dest=/opt/var/log/nginx owner=root group=root mode=0777
+  file: state=link src=/personium/nginx/log dest=/opt/var/log/nginx owner=root group=root mode=0777 force=yes
