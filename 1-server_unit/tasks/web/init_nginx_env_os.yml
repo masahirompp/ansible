@@ -6,6 +6,10 @@
 - name: Create user
   user: name=nginx uid=2010 shell=/sbin/nologin group=nginx home=/personium/nginx/lib comment="Nginx Administrator" create_home=no
 
+# なぜか上のコマンドで、nginxのホームディレクトリが作成されてしまうので、削除する
+- name: Delete nginx home directory
+  file: state=absent path=/personium/nginx/lib
+
 - name: Create /personium directory
   file: "state=directory path=/personium owner=root group=root"
 
