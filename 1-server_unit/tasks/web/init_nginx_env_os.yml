@@ -28,7 +28,7 @@
   file: state=directory path=/opt/disk1/nginx/log/accesslog_80 owner=root group=root mode=0755
 
 - name: Create /opt/disk1/nginx symlink
-  file: state=link src=/opt/disk1/nginx dest=/personium/nginx owner=root group=root mode=0777
+  file: state=link src=/opt/disk1/nginx dest=/personium/nginx owner=root group=root mode=0777 force=yes
 
 - name: Create /opt/disk1/var directory
   file: state=directory path=/opt/disk1/var owner=root group=root mode=0755
