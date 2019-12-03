@@ -4,7 +4,7 @@
   group: name=nginx gid=2010 state=present
 
 - name: Create user
-  user: name=nginx uid=2010 shell=/sbin/nologin group=nginx home=/personium/nginx/lib comment="Nginx Administrator" createhome=no
+  user: name=nginx uid=2010 shell=/sbin/nologin group=nginx home=/personium/nginx/lib comment="Nginx Administrator" create_home=no
 
 - name: Create /personium directory
   file: "state=directory path=/personium owner=root group=root"
